@@ -3,4 +3,11 @@
     <string name="slogan">{ try catch your dream job }</string>
     <string name="copyright">Made by Alex</string>
     <string name="jobs">Software Jobs</string>
+    <string name="label">Search Job...</string>
+    <string name="jobsHeading">Software Jobs</string>
+    <string name="jobTitle">Python Developer</string>
+    <string name="jobType">Full Time</string>
+    <string name="location">Nairobi</string>
+    <string name="date">26 Jan, 2021</string>
+    <string name="description">The world breaks everyone, and afterwards, many are strong at the broken places.</string>
 </resources>
