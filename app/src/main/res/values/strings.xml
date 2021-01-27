@@ -5,9 +5,11 @@
     <string name="jobs">Software Jobs</string>
     <string name="label">Search Job...</string>
     <string name="jobsHeading">Software Jobs</string>
-    <string name="jobTitle">Python Developer</string>
+    <string name="jobTitle">Junior Developer</string>
     <string name="jobType">Full Time</string>
-    <string name="location">Nairobi</string>
+    <string name="location">Andela - Nairobi</string>
     <string name="date">26 Jan, 2021</string>
-    <string name="description">The world breaks everyone, and afterwards, many are strong at the broken places.</string>
+    <string name="description">If you’re passionate about developing sites, applications, and tools for the web to help more people bike and walk more often, this position is for you. As a Junior Web Developer,
+you will be...</string>
+    <string name="btnMore">View Job</string>
 </resources>

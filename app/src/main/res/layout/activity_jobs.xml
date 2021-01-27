@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Jobs"
     android:background="#F6A938"
-    >
+    tools:context=".Jobs">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/search"
@@ -15,111 +13,145 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        app:boxCornerRadiusTopStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:hint="@string/label"
         app:boxCornerRadiusTopEnd="20dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:hint="@string/label">
+        app:boxCornerRadiusTopStart="20dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/jobsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/search"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:textSize="30sp"
+        android:layout_marginBottom="10dp"
         android:text="@string/jobsHeading"
         android:textColor="@color/black"
-        android:layout_marginBottom="20dp"
-        />
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/job_card"
         android:layout_width="480dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/search"
+        android:layout_below="@+id/jobsTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        app:cardCornerRadius="20dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        app:cardBackgroundColor="@color/white">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp"
-            android:text="@string/jobTitle"
-            android:textColor="#000"
-            android:textSize="20sp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/job_card1"
-        android:layout_width="480dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/job_card"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        app:cardCornerRadius="20dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="10dp"
         app:cardBackgroundColor="@color/white"
-       >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="20dp"
-                android:text="@string/jobTitle"
-                android:textColor="#000"
-                android:textSize="20sp" />
+        app:cardCornerRadius="20dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="20dp"
-                android:text="@string/jobType"
-                android:textColor="#000"
-                android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/top"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="20dp"
-                android:text="@string/location"
-                android:textColor="#000"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="20dp"
-                android:text="@string/date"
-                android:textColor="#000"
-                android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/jobTitle"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="20dp"
-                android:text="@string/description"
-                android:textColor="#000"
-                android:layout_marginTop="30dp"
-                android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/date"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="0dp" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/jobType"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/location"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/description"
+                    android:textColor="#000"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="20sp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp" />
+
+                <Button
+                    android:id="@+id/btnMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FFFFFF"
+                    android:text="@string/btnMore"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:backgroundTint="#FF9800" />
+            </LinearLayout>
+
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
-
-
 
 </RelativeLayout>
 
